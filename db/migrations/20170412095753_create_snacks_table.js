@@ -5,6 +5,7 @@ exports.up = function(knex) {
     table.string('name').notNullable().defaultTo('')
     table.text('img_url').notNullable().defaultTo('')
     table.string('origin').notNullable().defaultTo('')
+    table.string('type').notNullable().defaultTo('')
     table.text('review').notNullable().defaultTo('')
     table.integer('rating').notNullable().defaultTo(0)
     table.timestamps(true, true)
