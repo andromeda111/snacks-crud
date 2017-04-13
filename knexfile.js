@@ -13,7 +13,7 @@ const path = require('path')
    },
    production: {
      client: 'pg',
-     connection: process.env.DATABASE_URL,
+     connection: process.env.HEROKU_POSTGRESQL_NAVY_URL,
      migrations: {
        directory: path.join(__dirname, 'db', 'migrations')
      },
