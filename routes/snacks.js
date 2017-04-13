@@ -24,12 +24,12 @@ router.get('/:id', function(req, res, next) {
 
 router.post('/', function(req, res, next) {
   const snack = {
-    name: req.body.name,
-    img_url: req.body['img_url'],
-    origin: req.body.origin,
-    type: req.body.type,
-    rating: req.body.rating,
-    review: req.body.review
+    name: req.body['new-name'],
+    img_url: req.body['img-url'],
+    origin: req.body['new-origin'],
+    type: req.body['new-type'],
+    rating: req.body['new-rating'],
+    review: req.body['new-review']
   }
   var id = req.params.id
   db('snacks').insert(snack, '*').then(() => {
