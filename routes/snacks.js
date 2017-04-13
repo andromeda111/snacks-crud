@@ -60,9 +60,10 @@ router.put('/:id/edit', function(req, res, body) {
   })
 })
 
-router.delete('/', function(req, res, next) {
+router.delete('/:id', function(req, res, next) {
+  var id = req.params.id
   db('snacks').del().where({id}).then(() => {
-    res.render('/snacks')
+    res.redirect('/snacks')
   })
 })
 
