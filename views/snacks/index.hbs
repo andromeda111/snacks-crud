@@ -24,8 +24,10 @@
                         <td>{{type}}</td>
                         <td>{{rating}}</td>
                         <td>{{review}}</td>
-                        <td>Edit</td>
-                        <td>Delete</td>
+                        <td><a href="/snacks/{{id}}/edit">Edit</td>
+                          <td><form action="/snacks?_method=DELETE" method="post">
+                            <input type="submit" name="delete" value="Delete">
+                          </form></td>
                     </tr>
                 {{/each}}
             </tbody>
